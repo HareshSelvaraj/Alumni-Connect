@@ -1,0 +1,66 @@
+## 🌟 Core MVP Features: Built in 24 Hours  
+
+To maximize impact within 24 hours, we focused on **4–5 essential features** that form the foundation of our platform. These prioritize **reliability, trust, and usability** over advanced but time-intensive technologies.  
+
+---
+
+### 📘 1. Alumni Directory with Advanced Search  
+- **What it does:** Students can browse alumni profiles filtered by **company, pass-out year, or placement package**.  
+- **Why foundational:** Solves fragmented information, making the platform immediately useful.  
+- **Trust Layer:** Requires email verification to avoid fake entries.  
+- **Implementation Tip:**  
+  - Simple MongoDB query system  
+  - Fuzzy search to handle typos/incomplete data  
+  - Pre-populated with **20–30 sample alumni profiles**  
+
+---
+
+### 👤 2. Student Profile & Referral Request System  
+- **What it does:** Students create profiles showcasing skills/projects, then send **targeted referral requests** to alumni.  
+- **Why foundational:** Bridges students and alumni while addressing referral challenges.  
+- **Trust Layer:**  
+  - **Reputation flag** (👍 / 👎 after interactions)  
+  - **Request limits:** Max **3 per student per day** to prevent spam  
+- **Implementation Tip:**  
+  - Basic request form with email notifications  
+  - JWT for secure login & session handling  
+
+---
+
+### 🔒 3. Basic Trust & Verification Layer  
+- **What it does:** Ensures users are verified through **college email domains** and LinkedIn URLs for alumni.  
+- **Why foundational:** Tackles identity fraud and protects alumni from spam.  
+- **Trust Layer:**  
+  - Manual admin approval for new profiles during demo  
+  - Block suspicious activity (e.g., multiple requests from one IP)  
+- **Implementation Tip:**  
+  - Simple regex/API validation for email domains  
+  - Store verification status in MongoDB  
+
+---
+
+### 💬 4. Secure Messaging for Connections  
+- **What it does:** Enables **private chat** once a referral request is accepted.  
+- **Why foundational:** Referrals succeed only if proper communication happens.  
+- **Trust Layer:**  
+  - Uses **Socket.io** for real-time messaging  
+  - Keyword filters to block inappropriate content  
+- **Implementation Tip:**  
+  - Keep it **text-only** to save time  
+  - Use basic Socket.io rooms for accepted requests  
+
+---
+
+### 🛡️ 5. Admin Dashboard for Oversight  
+- **What it does:** Provides a simple panel for monitoring users, approving profiles, and tracking requests.  
+- **Why foundational:** Prevents issues that could break the hackathon demo.  
+- **Trust Layer:**  
+  - Error logs (e.g., failed logins, invalid requests)  
+  - Basic analytics (e.g., number of requests per day)  
+- **Implementation Tip:**  
+  - Minimal React + Express dashboard  
+  - Real-time monitoring using MongoDB queries  
+
+---
+
+✅ With these **5 Core Features**, the project balances **functionality, trust, and demo-readiness** — ensuring a solid MVP within the hackathon timeframe.
