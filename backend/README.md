@@ -168,7 +168,7 @@ curl -X POST http://localhost:3002/api/seed
 
 ```bash
 NODE_ENV=production
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/alumni_connect
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net
 JWT_SECRET=your-production-secret-key
 PORT=3000
 ```
