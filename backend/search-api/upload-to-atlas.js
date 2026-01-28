@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 // Replace this with your actual MongoDB Atlas connection string
-const MONGODB_URI = 'mongodb+srv://hareshswork:VlKXP7DZ3uMF8waD@vms.oqbam.mongodb.net/alumni-platform?retryWrites=true&w=majority&appName=VMS';
+const MONGODB_URI = 
 
 console.log('🚀 Uploading data to MongoDB Atlas...');
 console.log('Please replace the MONGODB_URI in this file with your actual connection string');
