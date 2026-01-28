@@ -6,7 +6,7 @@ Create a `.env` file in the `backend/search-api/` directory with your MongoDB At
 
 ```env
 # MongoDB Atlas Connection String
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/alumni-platform?retryWrites=true&w=majority
+MONGODB_URI= "Cluster srv link"
 
 # Server Port
 PORT=3002
