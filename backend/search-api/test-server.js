@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Test MongoDB connection
-const MONGODB_URI = 'mongodb+srv://hareshswork:hareshswork@cluster0.mongodb.net/alumni-network?retryWrites=true&w=majority';
+const MONGODB_URI =
 
 console.log('Testing MongoDB connection...');
 
