@@ -1,0 +1,119 @@
+services:
+  # Main Backend Service
+  - type: web
+    name: alumni-connect-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        fromDatabase:
+          name: alumni-connect-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: MONGO_URI
+        fromDatabase:
+          name: alumni-connect-db
+          property: connectionString
+
+  # Search API Service
+  - type: web
+    name: alumni-connect-search-api
+    env: node
+    plan: free
+    buildCommand: cd search-api && npm install
+    startCommand: cd search-api && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10001
+      - key: MONGODB_URI
+        fromDatabase:
+          name: alumni-connect-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+
+  # Feature 1 - Alumni Directory Search
+  - type: web
+    name: alumni-connect-feature1
+    env: node
+    plan: free
+    buildCommand: cd "Feature 1(alumni-directory-search)" && npm install
+    startCommand: cd "Feature 1(alumni-directory-search)" && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10002
+
+  # Feature 2 - Student Profile & Referral System
+  - type: web
+    name: alumni-connect-feature2
+    env: node
+    plan: free
+    buildCommand: cd "Feature 2(student-profile-referral-system)" && npm install
+    startCommand: cd "Feature 2(student-profile-referral-system)" && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10003
+      - key: MONGO_URI
+        fromDatabase:
+          name: alumni-connect-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+
+  # Feature 3 - Trust Verification Layer
+  - type: web
+    name: alumni-connect-feature3
+    env: node
+    plan: free
+    buildCommand: cd "Feature 3(trust-verification-layer)" && npm install
+    startCommand: cd "Feature 3(trust-verification-layer)" && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10004
+
+  # Feature 4 - Secure Messaging Chat
+  - type: web
+    name: alumni-connect-feature4
+    env: node
+    plan: free
+    buildCommand: cd "Feature 4(secure-messaging-chat)" && npm install
+    startCommand: cd "Feature 4(secure-messaging-chat)" && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10005
+
+  # Feature 5 - Admin Dashboard Oversight
+  - type: web
+    name: alumni-connect-feature5
+    env: node
+    plan: free
+    buildCommand: cd "Feature 5(admin-dashboard-oversight)" && npm install
+    startCommand: cd "Feature 5(admin-dashboard-oversight)" && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10006
+
+databases:
+  - name: alumni-connect-db
+    plan: free
+    databaseName: alumni_connect
+    user: alumni_user

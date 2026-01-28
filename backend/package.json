@@ -1,0 +1,49 @@
+{
+  "name": "alumni-connect-backend",
+  "version": "1.0.0",
+  "description": "Alumni Connect Platform Backend - Multi-service architecture",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "start:search": "cd search-api && npm start",
+    "start:feature1": "cd \"Feature 1(alumni-directory-search)\" && npm start",
+    "start:feature2": "cd \"Feature 2(student-profile-referral-system)\" && npm start",
+    "start:feature3": "cd \"Feature 3(trust-verification-layer)\" && npm start",
+    "start:feature4": "cd \"Feature 4(secure-messaging-chat)\" && npm start",
+    "start:feature5": "cd \"Feature 5(admin-dashboard-oversight)\" && npm start",
+    "install:all": "npm install && cd search-api && npm install && cd \"../Feature 1(alumni-directory-search)\" && npm install && cd \"../../Feature 2(student-profile-referral-system)\" && npm install && cd \"../../Feature 3(trust-verification-layer)\" && npm install && cd \"../../Feature 4(secure-messaging-chat)\" && npm install && cd \"../../Feature 5(admin-dashboard-oversight)\" && npm install",
+    "build": "echo 'No build step required for Node.js'",
+    "test": "echo 'No tests specified'"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.22.1",
+    "express-rate-limit": "^8.0.1",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.18.0",
+    "mongoose": "^7.5.0",
+    "multer": "^2.0.2",
+    "nodemailer": "^7.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "alumni",
+    "platform",
+    "backend",
+    "api",
+    "mongodb",
+    "express"
+  ],
+  "author": "HareshSelvaraj",
+  "license": "MIT"
+}
