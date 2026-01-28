@@ -4,6 +4,11 @@ An MVP built in **24 hours** to connect students with alumni for referrals, ment
 
 ---
 
+## 🚧 Development Status  
+> **⚠️ This project is still in active development.** Features and APIs may change. Please report any issues or bugs through GitHub Issues.
+
+---
+
 ## 🛠️ Tech Stack  
 - **Frontend:** React, Material-UI, Socket.io  
 - **Backend:** Node.js, Express.js, JWT  
