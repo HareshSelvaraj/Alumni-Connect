@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 // MongoDB Connection
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://testuser:testpass@cluster0.mongodb.net/alumni-platform?retryWrites=true&w=majority';
+const MONGODB_URI = process.env.MONGODB_URI ||
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
